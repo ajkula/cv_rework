@@ -331,14 +331,19 @@
 
     /* 768px (typiquement tablettes/mobiles) */
     @media (max-width: 768px) {
+      .resume {
+        flex-direction: column;
+      }
+
       .leftCol {
         width: 100%;
-        order: 1;
+        order: 2;
+        min-height: 100vh;
       }
 
       .rightCol {
         width: 100%;
-        order: 2;
+        order: 1;
       }
     }
 

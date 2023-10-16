@@ -389,9 +389,9 @@
 
       <div class="rightCol">
         <div class="tabs">
-          <button class="tablink" onclick="openTab(event, 'Experience')">Working Experience</button>
-          <button class="tablink" onclick="openTab(event, 'Education')">Education</button>
-          <button class="tablink" onclick="openTab(event, 'Projects')">Some of the Projects</button>
+          <button class="tablink" id="exp" onclick="openTab(event, 'Experience')">Working Experience</button>
+          <button class="tablink" id="edu" onclick="openTab(event, 'Education')">Education</button>
+          <button class="tablink" id="projects" onclick="openTab(event, 'Projects')">Some of my Projects</button>
         </div>
 
         <div id="Experience" class="tabcontent">
@@ -470,7 +470,8 @@
           "company": "F4-Group",
           "position": "FullStack Developer Intern",
           "timeperiod": "2016",
-          "description": "Internship on a prototype around a 3D map."
+          "description": `Internship on a prototype around a 3D map.
+          </br>Nodejs, Stylus, JADE, OSM type formalism.`
         }
       ],
       "education": [
@@ -614,7 +615,8 @@
           "company": "F4-Group",
           "position": "Stagiaire Développeur FullStack",
           "timeperiod": "2016",
-          "description": "Stage sur un prototype autour d'une carte 3D."
+          "description": `Stage sur un prototype autour d'une carte 3D.
+          </br>Nodejs, Stylus, JADE, formalisme type OSM.`
         }
       ],
       "education": [
@@ -719,6 +721,29 @@
     function updateDOMContent(data) {
       document.getElementById('fullName').textContent = `${data.name.first}${data.name.middle ? " "+data.name.middle+" " : " "}${data.name.last}`;
       document.getElementById('aboutSection').textContent = "software developer" //personData.about;
+
+      const tabIDsToLanguage = {
+        exp: {
+          en: `Working Experience`, 
+          fr: `Expérience`,
+        },
+        edu: {
+          en: `Education`,
+          fr: `Formation`,
+        },
+        projects: {
+          en: `Some of my Projects`,
+          fr:  `Projets personnels`,
+        },
+      };
+        
+      const selectedLang = document.getElementById('languageSelector').value;
+
+      for (let tabID in tabIDsToLanguage) {
+        const tabTitle = document.getElementById(tabID);
+        console.log(tabID, tabTitle);
+        tabTitle.innerHTML = tabIDsToLanguage[tabID][selectedLang];
+      }
 
       // Mapping of contact keys to FontAwesome icons/Material icons
       const contactIcons = {

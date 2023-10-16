@@ -62,7 +62,7 @@
       margin-top: 0;
       letter-spacing: 10px;
       font-weight: 400;
-      font-size: 2.4em;
+      font-size: 2.8em;
       margin-bottom: 10px;
     }
     .title h2 {
@@ -74,7 +74,7 @@
       color: rgba(63, 61, 60, 0.71);
       text-transform: uppercase;
       opacity: 0.8;
-      font-size: 1.5em;
+      font-size: 2em;
     }
 
     .title div {
@@ -611,7 +611,14 @@
     const experienceSection = document.getElementById('experienceSection');
     personData.experience.forEach(job => {
       const div = document.createElement('div');
-      div.innerHTML = `<strong>${job.company}</strong><br>${job.position}<br>${job.timeperiod}<br>${job.description}`;
+      div.innerHTML = `
+      <h3>
+        <strong>${job.company}</strong>
+      </h3>
+      <br>
+      <h3>${job.position}</h3>
+      <br>${job.timeperiod}
+      <br>${job.description}`;
       div.style = `
         background-color: white;
         border-radius: 5px;
@@ -624,7 +631,13 @@
     const educationSection = document.getElementById('educationSection');
     personData.education.forEach(edu => {
       const div = document.createElement('div');
-      div.innerHTML = `<strong>${edu.degree}</strong><br>${edu.timeperiod}<br>${edu.description || ''}`;
+      div.innerHTML = `
+      <h3>
+        <strong>${edu.degree}</strong>
+      </h3>
+      <br>
+      <h3>${edu.timeperiod}</h3>
+      <br>${edu.description || ''}`;
       div.style = `
         background-color: white;
         border-radius: 5px;
@@ -637,7 +650,13 @@
     const projectsSection = document.getElementById('projectsSection');
     personData.projects.forEach(project => {
       const div = document.createElement('div');
-      div.innerHTML = `<strong>${project.name}</strong><br>${project.company}<br>${project.description}`;
+      div.innerHTML = `
+      <h3>
+        <strong>${project.name}</strong>
+      </h3>
+      <br>
+      <h3>${project.company}</h3>
+      <br>${project.description}`;
       div.style = `
         background-color: white;
         border-radius: 5px;

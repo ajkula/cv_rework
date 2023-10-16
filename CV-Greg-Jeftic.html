@@ -213,8 +213,8 @@
 
     .text {
       float: right;
-      width: 69%;
-      padding-right: 10%;
+      width: 100%;
+    /*  padding-right: 10%; */
       padding-top: 0;
       display: block;
       font-size: 14px;
@@ -223,6 +223,8 @@
 
     .item {
       display: flex;
+      flex-direction: row;
+      width: 100%;
       /* align-items: center; Centrer verticalement le contenu */
     }
 
@@ -751,7 +753,7 @@
               ${iconClass}
               </div>
               <div class="text">
-              <a href="${data.contact[key]}" target="_blank">${data.contact[key]}</a>
+              <a href="${data.contact[key]}" target="_blank">DarkAdventures game</a>
               </div>
           </div>`;
         } else {

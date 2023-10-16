@@ -31,6 +31,11 @@
       width: 0px;
       background: transparent; /* Rendre la barre de défilement complètement transparente */
     }
+    /* Pour Chrome, Safari et Opera */
+    .leftCol::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Rendre la barre de défilement complètement transparente */
+    }
 
     a {
       cursor: pointer;
@@ -149,7 +154,6 @@
     }
 
     .leftCol {
-      overflow-y: hidden;
       overflow-x: hidden;
       flex: 1;
       display: flex;
@@ -163,8 +167,7 @@
     }
 
 
-    .rightCol,
-    .farRightCol {
+    .rightCol {
       flex: 2;
       /* Flexbox pour que chaque colonne prenne une portion égale de l'espace */
       display: flex;

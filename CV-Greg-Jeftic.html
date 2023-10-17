@@ -272,11 +272,12 @@
     .tabcontent {
       display: none;
       padding: 20px;
+      margin-bottom: 50px;
     }
 
     /* Style des onglets */
     .tablink {
-      background-color: #555;
+      background-color: #3671ac; /* #555; */
       color: white;
       float: left;
       border: none;
@@ -294,7 +295,7 @@
 
     /* Style de l'onglet actif */
     .tablink.active {
-      background-color: #ccc; /* Changer la couleur de fond de l'onglet actif */
+      background-color: #92bbe4; /*#ccc; /* Changer la couleur de fond de l'onglet actif */
       color: black; /* Changer la couleur du texte de l'onglet actif */
     }
         
@@ -315,6 +316,7 @@
 
     .tablink:hover {
       background-color: #ddd;
+      color: #3671ac;
     }
 
     .language-selector {
@@ -354,6 +356,13 @@
         width: 100%;
         order: 1;
       }
+    }
+
+    #fullName {
+      color: #3671ac;
+    }
+    #aboutSection {
+      color: #6699CC;
     }
   </style>
 </head>
@@ -431,7 +440,7 @@
           "position": "Mobile Apps Developer",
           "timeperiod": "Since April 2023",
           "description": `CarCare, tracking and maintenance of cars for users (uploaded on the platform...)
-          </br>- PetMedBook, medical record for pets (uploaded on the platform...)
+          </br>- PetMedBook, medical record for pets (in progress)
           </br>- Creation of video games for smartphones.
           </br>Development of scientific applications for research organizations:
           </br>CEA - Commission for Atomic Energy and Alternative Energies
@@ -442,17 +451,19 @@
           "position": "Developer",
           "timeperiod": "2021 - 2022",
           "description": `FinTech company specializing in instant payments and direct debits.
-          </br>Technologies used: Java/Spring boot, MySQL via JPA.
+          </br>Technologies used: Java/Spring boot, MySQL via JPA in a PCI-DSS environment.
           </br>Responsibilities: Back-end development, cleaning and improving an old project, implementing good practices.
-          </br>Main projects: Development of a new SWIFT micro-service, updating daily instead of monthly.`
+          </br>Main projects:
+          </br> - Development of a new SWIFT micro-service, updating daily instead of monthly.
+          </br> - Modernization of APIs for ERDF a french historical energy company.`
         },
         {
           "company": "Dalenys, Paris",
           "position": "Developer",
           "timeperiod": "2018 - 2020",
-          "description": `BackOffice/Dashboard v2.
-          </br>And on the API Gateway in Nodejs
-          </br>Fintech, Nodejs, React, Redux, PCI-DSS. Customer back-office.`
+          "description": `Worked on Dashboard v2 and on the API Gateway.
+          </br>Made the financial reconciliation module in React/Redux.
+          </br>Nodejs, React, Redux, PCI-DSS.`
         },
         {
           "company": "Ogury",
@@ -607,7 +618,7 @@
           "position": "Développeur d'applications pour smartphone",
           "timeperiod": "Depuis 2023",
           "description": `- CarCare, suivi et maintenance de voiture pour usagers (déposé sur la plateforme...)
-          </br>- PetMedBook, carnet médical pour animaux de compagnies (déposé sur la plateforme...)
+          </br>- PetMedBook, carnet médical pour animaux de compagnies (en cours)
           </br>- Création de jeux vidéos pour smartphones.
           </br>Développement d'application scientifique pour organisme de recherches :
           </br>CEA - Commissariat à l'Energie Atomique et aux Energies Alternatives
@@ -618,15 +629,20 @@
           "position": "Développeur",
           "timeperiod": "2021 - 2022",
           "description": `Entreprise FinTech spécialisée dans les paiements instantanés et les prélèvements directs.
-          </br>Technologies utilisées : Java/Spring boot, MySQL via JPA.
+          </br>Technologies utilisées : Java/Spring boot, MySQL via JPA dans un environement PCI-DSS.
           </br>Responsabilités : Développement back-end, nettoyage et amélioration d'un ancien projet, mise en place de bonnes pratiques.
-          </br>Projets principaux : Développement d'un nouveau micro-service SWIFT, mise à jour quotidienne au lieu de mensuelle.`
+          </br>Projets principaux :
+          </br> - Développement d'un nouveau micro-service SWIFT, mise à jour quotidienne au lieu de mensuelle.
+          </br> - Modernisation d'API pour le client ERDF.`
         },
         {
           "company": "Dalenys, Paris",
           "position": "Développeur",
           "timeperiod": "2018 - 2020",
-          "description": "BackOffice/Dashboard v2 pour les clients</br>Et sur l'API Gateway en Nodejs</br>J'ai participé aux refinements du projet de versionning Elastic search.</br>Fintech, Nodejs, React, Redux, PCI-DSS. Back-office client."
+          "description": `BackOffice/Dashboard v2.
+          </br>Développement et maintenance de l'API Gateway et du dashboard React/Redux.
+          </br>Notemment développement du module réconciliation financiaire sur le dashboard.
+          </br>Nodejs, React, Redux, PCI-DSS.`
         },
         {
           "company": "Ogury",

@@ -20,10 +20,9 @@
       background: #cccccc;
       display: flex;
       /* Ajout de Flexbox */
-      height: 100vh;
-      /* Hauteur complète de la fenêtre */
       height: 100vh; /* Hauteur complète de la fenêtre */
       overflow-y: scroll; /* Permet le défilement vertical */
+      overflow-x: hidden; /* Cache le contenu débordant horizontalement */
       scrollbar-width: none; /* Pour Firefox */
       -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
     }
@@ -164,6 +163,7 @@
       background-color: #16151c;
       color: rgba(255, 255, 255, 0.59);
       max-width: 330px;
+      min-width: 180px;
     }
 
 
@@ -184,8 +184,6 @@
 
     .leftCol .heading {
       background-color: #16151c;
-      height: 277px;
-      margin-bottom: 50px;
     }
 
     .block {
@@ -321,30 +319,52 @@
 
     #languageSelector {
       padding: 5px 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
+      font-size: 1.2em;
+      font-weight: 800;
+      text-align: center;
+      border: 1px solid #3671ac;
       border-radius: 5px;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #3671ac;
+      color: white;
       cursor: pointer;
       width: 100%;
+      height: 48px;
+    }
+
+    option {
+      font-size: 1em;
+      font-weight: 800;
+      background-color: #3671ac;
+      color: white;
+    }
+
+    option:hover {
+      background-color: #ddd;
+      color: #3671ac;
+    }
+
+    option:focus {
+      background-color: #ddd;
+      color: #3671ac;
     }
 
     #languageSelector:focus {
       outline: none;
-      border-color: #aaa;
+      background-color: #ddd;
+      color: #3671ac;
     }
 
     /* 768px (typiquement tablettes/mobiles) */
     @media (max-width: 768px) {
       .resume {
         flex-direction: column;
+        width: 100%;
       }
 
       .leftCol {
-        width: 100%;
         order: 2;
         min-height: 100vh;
+        max-width: 100% !important;
       }
 
       .rightCol {
@@ -369,6 +389,15 @@
     h3 strong {
       color: #3671ac;
     }
+
+    #myselfpic {
+      width: 100%; /* Le conteneur prendra la pleine largeur de son parent */
+    }
+
+    #myImage {
+      width: 100%; /* L'image prendra la pleine largeur de son conteneur */
+      height: auto; /* La hauteur de l'image s'ajustera automatiquement pour maintenir les proportions */
+    }
   </style>
 </head>
 
@@ -376,7 +405,7 @@
   <div class="resume">
     <div class="leftCol m_box">
       <div class="heading" id="myselfpic">
-        <img id="myImage" width="100%" alt="Picture of Greg" />
+        <img id="myImage" alt="Picture of Greg" />
       </div>
 
       <!-- Languages selector -->

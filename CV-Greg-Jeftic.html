@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
+  <style>
     body {
       overscroll-behavior-y: none;
       overflow-y: hidden;
@@ -20,22 +20,30 @@
       background: #cccccc;
       display: flex;
       /* Ajout de Flexbox */
-      height: 100vh; /* Hauteur complète de la fenêtre */
-      overflow-y: scroll; /* Permet le défilement vertical */
-      overflow-x: hidden; /* Cache le contenu débordant horizontalement */
-      scrollbar-width: none; /* Pour Firefox */
-      -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+      height: 100vh;
+      /* Hauteur complète de la fenêtre */
+      overflow-y: scroll;
+      /* Permet le défilement vertical */
+      overflow-x: hidden;
+      /* Cache le contenu débordant horizontalement */
+      scrollbar-width: none;
+      /* Pour Firefox */
+      -ms-overflow-style: none;
+      /* Pour Internet Explorer et Edge */
     }
 
     /* Pour Chrome, Safari et Opera */
     .resume::-webkit-scrollbar {
       width: 0px;
-      background: transparent; /* Rendre la barre de défilement complètement transparente */
+      background: transparent;
+      /* Rendre la barre de défilement complètement transparente */
     }
+
     /* Pour Chrome, Safari et Opera */
     .leftCol::-webkit-scrollbar {
       width: 0px;
-      background: transparent; /* Rendre la barre de défilement complètement transparente */
+      background: transparent;
+      /* Rendre la barre de défilement complètement transparente */
     }
 
     a {
@@ -70,6 +78,7 @@
       font-size: 2.8em;
       margin-bottom: 10px;
     }
+
     .title h2 {
       margin: 0;
       padding: 0;
@@ -214,7 +223,7 @@
     .text {
       float: right;
       width: 100%;
-    /*  padding-right: 10%; */
+      /*  padding-right: 10%; */
       padding-top: 0;
       display: block;
       font-size: 14px;
@@ -229,7 +238,8 @@
     }
 
     .icon {
-      margin-right: 15px; /* Espace de 15px à droite de l'icône */
+      margin-right: 15px;
+      /* Espace de 15px à droite de l'icône */
       color: brown;
     }
 
@@ -271,7 +281,8 @@
     /* Style des onglets */
     .tablink {
       font-family: inherit;
-      background-color: #3671ac; /* #555; */
+      background-color: #3671ac;
+      /* #555; */
       color: white;
       float: left;
       border: none;
@@ -288,10 +299,12 @@
 
     /* Style de l'onglet actif */
     .tablink.active {
-      background-color: #92bbe4; /*#ccc; /* Changer la couleur de fond de l'onglet actif */
-      color: black; /* Changer la couleur du texte de l'onglet actif */
+      background-color: #92bbe4;
+      /*#ccc; /* Changer la couleur de fond de l'onglet actif */
+      color: black;
+      /* Changer la couleur du texte de l'onglet actif */
     }
-        
+
     /* Style pour le premier onglet */
     .tablink:first-child {
       margin-left: 30px;
@@ -391,12 +404,15 @@
     }
 
     #myselfpic {
-      width: 100%; /* Le conteneur prendra la pleine largeur de son parent */
+      width: 100%;
+      /* Le conteneur prendra la pleine largeur de son parent */
     }
 
     #myImage {
-      width: 100%; /* L'image prendra la pleine largeur de son conteneur */
-      height: auto; /* La hauteur de l'image s'ajustera automatiquement pour maintenir les proportions */
+      width: 100%;
+      /* L'image prendra la pleine largeur de son conteneur */
+      height: auto;
+      /* La hauteur de l'image s'ajustera automatiquement pour maintenir les proportions */
     }
   </style>
 </head>
@@ -420,9 +436,9 @@
       <div class="item last">
         <div id="contactSection"></div>
       </div>
-        <div class="section-headline" style="color: #3671ac;">Skills</div>
-        <div id="skillsSection"></div>
-        <div class="section-headline"></div>
+      <div class="section-headline" style="color: #3671ac;">Skills</div>
+      <div id="skillsSection"></div>
+      <div class="section-headline"></div>
     </div>
     <div class="rightCol">
       <div class="title">
@@ -729,7 +745,7 @@
           "name": "Fast-tasks",
           "company": "Projet personnel Nodejs",
           "description": `Projet de veille technologique.
-          </br>Une app managée par PM2 pour gérer des "Tasks" qui transfère les données des requêtes qu'elle reçoit à un deuxième process via bus IPC pour répondre très rapidement au client.</br>Il y a deux process: API qui gère l'APi Express, la doc avec Swagger-ui, SERVICES qui attend des messages via bus IPC et gère les requêtes vers PostgreSQL.
+          </br>Une app managée par PM2 qui gère des "Tasks", transfère les données des requêtes à un deuxième process via bus IPC.</br>But: répondre très rapidement au client.</br>Il y a deux process: API qui gère l'APi Express, la doc avec Swagger-ui, SERVICES qui attend des messages via bus IPC et gère les requêtes vers PostgreSQL.
           </br>
           </br>
           <a href="https://github.com/ajkula/fast-tasks" 
@@ -812,7 +828,7 @@
       },
       "lang": "fr"
     };
-//  const personDataEN = {};  const personDataFR = {};
+    //  const personDataEN = {};  const personDataFR = {};
 
     function loadLanguage(lang) {
       const personData = getPersonDataByLang(lang);
@@ -822,19 +838,19 @@
     function getPersonDataByLang(lang) {
       return lang === 'fr' ? personDataFR : personDataEN;
     }
-    
+
     function changeLanguage() {
       const selectedLang = document.getElementById('languageSelector').value;
       loadLanguage(selectedLang);
     }
-    
+
     function updateDOMContent(data) {
-      document.getElementById('fullName').textContent = `${data.name.first}${data.name.middle ? " "+data.name.middle+" " : " "}${data.name.last}`;
+      document.getElementById('fullName').textContent = `${data.name.first}${data.name.middle ? " " + data.name.middle + " " : " "}${data.name.last}`;
       document.getElementById('aboutSection').textContent = "software developer" //personData.about;
 
       const tabIDsToLanguage = {
         exp: {
-          en: `Working Experience`, 
+          en: `Working Experience`,
           fr: `Expérience`,
         },
         edu: {
@@ -843,15 +859,14 @@
         },
         projects: {
           en: `Some of my Projects`,
-          fr:  `Projets personnels`,
+          fr: `Projets personnels`,
         },
       };
-        
+
       const selectedLang = document.getElementById('languageSelector').value;
 
       for (let tabID in tabIDsToLanguage) {
         const tabTitle = document.getElementById(tabID);
-        console.log(tabID, tabTitle);
         tabTitle.innerHTML = tabIDsToLanguage[tabID][selectedLang];
       }
 
@@ -864,125 +879,88 @@
         website: '<i class="material-icons">language</i>',
       };
 
-      // Update Contact Section
-      const contactSection = document.getElementById('contactSection');
-      contactSection.innerHTML = ""; // Clear existing content
-      for (let key in data.contact) {
+      function createSectionElement(data, createContentCallback) {
         const div = document.createElement('div');
-        const iconClass = contactIcons[key] || ''; // Use 'fa-question-circle' as default icon if no match is found
-
-        if (key === "website") {
-          div.innerHTML = `
-          <div class="item">
-              <div class="icon">
-              ${iconClass}
-              </div>
-              <div class="text">
-              <a href="${data.contact[key]}" target="_blank">DarkAdventures game</a>
-              </div>
-          </div>`;
-        } else {
-          div.innerHTML = `
-          <div class="item">
-              <div class="icon">${iconClass}
-              </div>
-              <div class="text">${data.contact[key]}
-              </div>
-          </div>`;
-        }
-
-        div.style = `margin: 10px; display: flex; orientation: row; align-items: space-between;`;
-        contactSection.appendChild(div);
+        div.innerHTML = createContentCallback(data);
+        div.style = `
+          background-color: white;
+          border-radius: 5px;
+          padding: 20px;
+          margin: 10px;`;
+        return div;
       }
 
+      function updateSection(sectionId, dataArray, elementCreationCallback) {
+        const section = document.getElementById(sectionId);
+        section.innerHTML = ""; // Clear existing content
+        dataArray.forEach(data => section.appendChild(elementCreationCallback(data)));
+      }
+
+      // Update Contact Section
+      updateSection('contactSection', Object.entries(data.contact), ([key, value]) => {
+        const div = document.createElement('div');
+        div.style = "margin: 10px; display: flex; orientation: row; align-items: space-between;";
+        const iconClass = contactIcons[key] || '';
+        div.innerHTML = key === "website" ?
+          `<div class="item">
+                  <div class="icon">${iconClass}</div>
+                  <div class="text"><a href="${value}" target="_blank">DarkAdventures game</a></div>
+              </div>` :
+          `<div class="item">
+                  <div class="icon">${iconClass}</div>
+                  <div class="text">${value}</div>
+              </div>`;
+        return div;
+      });
+
       // Update Skills Section
-      const skillsSection = document.getElementById('skillsSection');
-      skillsSection.innerHTML = ""; // Clear existing content
-      data.skills.forEach(skill => {
-        // Create a container for the skill
+      updateSection('skillsSection', data.skills, (skill) => {
         const skillContainer = document.createElement('div');
-        skillContainer.style = `
-          padding: 5px;
-          border-radius: 5px;
-        `;
-
-        // Create a label for the skill
-        const skillLabel = document.createElement('div');
-        skillLabel.textContent = skill.name;
-        skillContainer.appendChild(skillLabel);
-
-        // Create a div for the progress bar
-        const progressBar = document.createElement('div');
-        progressBar.style = `
-          background-color: #6699CC;
-          width: ${skill.level}%;
-          height: 8px;
-          border-radius: 5px;
-        `;
-        skillContainer.appendChild(progressBar);
-
-        skillsSection.appendChild(skillContainer);
+        skillContainer.style = "padding: 5px; border-radius: 5px;";
+        skillContainer.innerHTML = `
+              <div>${skill.name}</div>
+              <div style="background-color: #6699CC; width: ${skill.level}%; height: 8px; border-radius: 5px;"></div>`;
+        return skillContainer;
       });
 
-      // Update Experience Section
-      const experienceSection = document.getElementById('experienceSection');
-      experienceSection.innerHTML = ""; // Clear existing content
-      data.experience.forEach(job => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-        <h3>
-          <strong>${job.company}</strong>
-        </h3>
-        <br>
-        <h3>${job.position}</h3>
-        <br>${job.timeperiod}
-        <br>${job.description}`;
-        div.style = `
-          background-color: white;
-          border-radius: 5px;
-          padding: 20px;
-          margin: 10px;`;
-        experienceSection.appendChild(div);
-      });
+      const makeStructureByTabName = (sectionId, item) => {
+        switch(sectionId) {
+          case "experience":
+            return `
+              <h3>
+                <strong>${item.company}</strong>
+              </h3>
+              </br>
+              <h3>${item.position}</h3>
+              </br>${item.timeperiod}
+              </br>${item.description}`;
+          case "education":
+            return `
+              <h3>
+                <strong>${item.degree}</strong>
+              </h3>
+              </br>
+              <h3>${item.timeperiod}</h3>
+              </br>${item.description || ''}`;
+          case "projects":
+            return `
+              <h3>
+                <strong>${item.name}</strong>
+              </h3>
+              </br>
+              <h3>${item.company}</h3>
+              </br>${item.description}`;
+        }
+      };
 
-      // Update Education Section
-      const educationSection = document.getElementById('educationSection');
-      educationSection.innerHTML = ""; // Clear existing content
-      data.education.forEach(edu => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-        <h3>
-          <strong>${edu.degree}</strong>
-        </h3>
-        <br>
-        <h3>${edu.timeperiod}</h3>
-        <br>${edu.description || ''}`;
-        div.style = `
-          background-color: white;
-          border-radius: 5px;
-          padding: 20px;
-          margin: 10px;`;
-        educationSection.appendChild(div);
-      });
-
-      // Update Projects Section
-      const projectsSection = document.getElementById('projectsSection');
-      projectsSection.innerHTML = ""; // Clear existing content
-      data.projects.forEach(project => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-        <h3>
-          <strong>${project.name}</strong>
-        </h3>
-        <br>
-        <h3>${project.company}</h3>
-        <br>${project.description}`;
-        div.style = `
-          background-color: white;
-          border-radius: 5px;
-          padding: 20px;
-          margin: 10px;`;
-        projectsSection.appendChild(div);
+      // Update Experience, Education, and Projects Sections
+      ['experience', 'education', 'projects'].forEach(sectionId => {
+        updateSection(sectionId+"Section", data[sectionId], (item) => {
+          const div = document.createElement('div');
+          div.style = "background-color: white; border-radius: 5px; padding: 20px; margin: 10px;";
+          div.innerHTML = makeStructureByTabName(sectionId, item);
+          return div;
+        });
       });
     }
 
@@ -1009,7 +987,7 @@
     const pageLang = browserLang.startsWith('en') ? 'en' : 'fr';
     document.getElementById('languageSelector').value = pageLang;
     loadLanguage(pageLang);
-    
+
     // Get the element with id="defaultOpen" and click on it
     document.getElementsByClassName("tablink")[0].click();
   </script>

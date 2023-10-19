@@ -873,8 +873,14 @@
     }
 
     function updateDOMContent(data) {
+      const selectedLang = document.getElementById('languageSelector').value;
+
+      const aboutSection = {
+        en: "software developer",
+        fr: "développeur"
+      };
       document.getElementById('fullName').textContent = `${data.name.first}${data.name.middle ? " " + data.name.middle + " " : " "}${data.name.last}`;
-      document.getElementById('aboutSection').textContent = "software developer" //personData.about;
+      document.getElementById('aboutSection').textContent = aboutSection[selectedLang]; //personData.about;
 
       const tabIDsToLanguage = {
         exp: {
@@ -890,8 +896,6 @@
           fr: `Projets personnels`,
         },
       };
-
-      const selectedLang = document.getElementById('languageSelector').value;
 
       for (let tabID in tabIDsToLanguage) {
         const tabTitle = document.getElementById(tabID);

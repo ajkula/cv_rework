@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <title>Resume of Greg Jeftic</title>
@@ -16,6 +15,7 @@
       overscroll-behavior-y: none;
       overflow-y: hidden;
       font-family: 'Open Sans', sans-serif;
+      margin: 0px !important;
     }
 
     .resume {
@@ -1012,6 +1012,13 @@
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementsByClassName("tablink")[0].click();
+
+    window.addEventListener("load", function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1);
+      }, 0);
+    });
+
   </script>
 
   <script>

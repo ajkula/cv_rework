@@ -359,12 +359,6 @@
       color: #3671ac;
     }
 
-    #languageSelector:focus {
-      outline: none;
-      background-color: #ddd;
-      color: #3671ac;
-    }
-
     /* 768px (typiquement tablettes/mobiles) */
     @media (max-width: 768px) {
       .resume {
@@ -671,8 +665,8 @@
         "email": "greg.jeftic@gmail.com",
         "phone": "+33620535773",
         "street": "Île-de-France",
-        "github": "<a href='https://github.com/ajkula' target='_blank'>github.com/ajkula</a>",
-        "website": "https://github.com/ajkula/DarkAdventures"
+        "github": "<a href='https://github.com/ajkula' target='_blank'>@ajkula's github</a>",
+        "website": "<a href='https://github.com/ajkula/DarkAdventures' target='_blank'>DarkAdventures game</a>",
       },
       "lang": "en"
     };
@@ -848,8 +842,8 @@
         "email": "greg.jeftic@gmail.com",
         "phone": "+33620535773",
         "street": "Île-de-France",
-        "github": "<a href='https://github.com/ajkula' target='_blank'>github.com/ajkula</a>",
-        "website": "https://github.com/ajkula/DarkAdventures"
+        "github": "<a href='https://github.com/ajkula' target='_blank'>Github de @ajkula</a>",
+        "website": "<a href='https://github.com/ajkula/DarkAdventures' target='_blank'>Jeu DarkAdventures</a>",
       },
       "lang": "fr"
     };
@@ -930,12 +924,7 @@
         const div = document.createElement('div');
         div.style = "margin: 10px; display: flex; orientation: row; align-items: space-between;";
         const iconClass = contactIcons[key] || '';
-        div.innerHTML = key === "website" ?
-          `<div class="item">
-                  <div class="icon">${iconClass}</div>
-                  <div class="text"><a href="${value}" target="_blank">DarkAdventures game</a></div>
-              </div>` :
-          `<div class="item">
+        div.innerHTML = `<div class="item">
                   <div class="icon">${iconClass}</div>
                   <div class="text">${value}</div>
               </div>`;
